@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front End Case Study</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+        select, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Front End Case Study</h2>
+        <label for="document">Select Document:</label>
+        <select id="document">
+            <option value="doc1">Document 1</option>
+            <option value="doc2">Document 2</option>
+        </select>
+        
+        <label for="state">Select State:</label>
+        <select id="state">
+            <option value="state1">State 1</option>
+            <option value="state2">State 2</option>
+        </select>
+        
+        <button onclick="showDocument()">SHOW</button>
+        
+        <div class="result" id="result">
+            <p><strong>Date:</strong> <span id="date"></span></p>
+            <p><strong>Graph:</strong> Sales:50 , Expenses: 100</p>
+            <p><strong>Summary:</strong> <span id="summary"></span></p>
+            <p><strong>Details:</strong> <span id="details"></span></p>
+            <p><strong>Link 1:</strong> <a href="#" id="link1">Click here</a></p>
+            <p><strong>Link 2:</strong> <a href="#" id="link2">Click here</a></p>
+        </div>
+    </div>
+
+    <script>
+        function showDocument() {
+            document.getElementById("date").innerText = new Date().toLocaleDateString();
+            document.getElementById("summary").innerText = "This is a small summary of the document.";
+            document.getElementById("details").innerText = "This is a larger paragraph containing detailed information about the document.";
+            document.getElementById("link1").href = "#";
+            document.getElementById("link2").href = "#";
+            document.getElementById("result").style.display = "block";
+
+        }
+    </script>
+</body>
+</html>
