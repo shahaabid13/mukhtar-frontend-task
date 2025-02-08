@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Front End Case Study</h2>
+
+  <app-dropdown-selector (documentSelected)="onDocumentSelected($event)"
+                         (stateSelected)="onStateSelected($event)">
+  </app-dropdown-selector>
+
+  <button (click)="showDocument()">SHOW</button>
+
+  <app-result-display *ngIf="showResult" [document]="selectedDocument" [state]="selectedState">
+  </app-result-display>
+</div>
+
+
+
